@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <div class="row">
+                <div class="col col-12 col-sm-4"></div>
+                    <div class="col col-12 col-sm-4">
+                        <table class="table">
+                            <tr>
+                                <td>number1</td>
+                                <td><input type="text" class="form-control" id="num1"></td>
+                            </tr>
+                            <tr>
+                                <td>number2</td>
+                                <td><input type="text" class="form-control" id="num2"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><button type="button" class="btn btn-success" onclick="checkNum()">check</button></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><p id="result"></p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col col-12 col-sm-4"></div>
+                
+            </div>
+        </div>
+    </form>
+    <script>
+        function checkNum()
+        {
+            var a=parseInt(document.getElementById("num1").value);
+            var b=parseInt(document.getElementById("num2").value);
+            if(a>b)
+            {
+                document.getElementById("result").innerHTML="the largest number is "+a;
+
+            }
+            else{
+                document.getElementById("result").innerHTML="the largest number is "+b;
+            }
+
+        }
+    </script>
+</body>
+</html>
